@@ -1,0 +1,108 @@
+.wrapper {
+  position: relative;
+  padding-top: 9vh;
+  padding-bottom: 9vh;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+  }
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+}
+
+.main_text {
+  line-height: 1;
+}
+
+.main_text_sec {
+  line-height: 1;
+}
+
+.main_text_sec:hover {
+  color: #ba181b;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.main_text:hover {
+  color: #ba181b;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.title {
+  text-align: left;
+  font-weight: 800;
+  font-size: rem(100px);
+  letter-spacing: 1px;
+  color: white;
+}
+
+.highlight {
+  font-weight: 800;
+  font-size: 300px;
+  line-height: 0.8;
+  letter-spacing: 10px;
+  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
+  --s: 0.1em; /* the thickness of the line */
+  --c: #ba181b; /* the color */
+  color: #ba181b;
+  padding-bottom: var(--s);
+  background: linear-gradient(90deg, var(--c) 50%, #000 0)
+      calc(100% - var(--_p, 0%)) / 200% 100%,
+    linear-gradient(var(--c) 0 0) 0% 100% / var(--_p, 0%) var(--s) no-repeat;
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  transition: 0.5s;
+}
+
+.highlight:hover {
+  --_p: 100%;
+  cursor: pointer;
+}
+
+.description {
+  text-align: center;
+  color: #d1d1d1;
+  font-size: 24px;
+  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
+  @media (max-width: $mantine-breakpoint-xs) {
+    text-align: left;
+    font-size: var(--mantine-font-size-md);
+  }
+}
+
+.controls {
+  margin-top: var(--mantine-spacing-lg);
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    flex-direction: column;
+  }
+}
+
+.control {
+  &:not(:first-of-type) {
+    margin-left: var(--mantine-spacing-md);
+  }
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    height: rem(42px);
+    font-size: var(--mantine-font-size-md);
+
+    &:not(:first-of-type) {
+      margin-top: var(--mantine-spacing-md);
+      margin-left: 0;
+    }
+  }
+}
+

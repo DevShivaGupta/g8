@@ -1,5 +1,7 @@
 import { createTheme } from "@mantine/core";
 
 export const theme = createTheme({
-  /* Put your mantine theme override here */
+  fontFamily: "Roboto, sans-serif",
+  fontFamilyMonospace: "Monaco, Courier, monospace",
+  headings: { fontFamily: "Bebas Neue, sans-serif" },
 });
